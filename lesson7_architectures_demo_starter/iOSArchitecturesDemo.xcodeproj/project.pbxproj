@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C254EB7266BE88500CD7BB4 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4C254EB6266BE88500CD7BB4 /* SwiftPackageProductDependency */; };
+		4C209725266BFE9300C939C1 /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C209724266BFE9300C939C1 /* AppDetailHeaderView.swift */; };
+		4C209728266BFF3600C939C1 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C209727266BFF3600C939C1 /* AppDetailHeaderViewController.swift */; };
+		4C254EB7266BE88500CD7BB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4C254EB6266BE88500CD7BB4 /* Alamofire */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2942034A3350011E01A /* SearchViewController.swift */; };
 		E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D2992034A3350011E01A /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C209724266BFE9300C939C1 /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
+		4C209727266BFF3600C939C1 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
 		E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArchitecturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E1D2922034A3350011E01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0E1D2942034A3350011E01A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C254EB7266BE88500CD7BB4 /* BuildFile in Frameworks */,
+				4C254EB7266BE88500CD7BB4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				F8114FC422A3E77500102830 /* AppDetailView.swift */,
+				4C209724266BFE9300C939C1 /* AppDetailHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				E0E1D3D0203C48D70011E01A /* AppDetailViewController.swift */,
+				4C209727266BFF3600C939C1 /* AppDetailHeaderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,7 +283,7 @@
 			);
 			name = iOSArchitecturesDemo;
 			packageProductDependencies = (
-				4C254EB6266BE88500CD7BB4 /* SwiftPackageProductDependency */,
+				4C254EB6266BE88500CD7BB4 /* Alamofire */,
 			);
 			productName = iOSArchitecturesDemo;
 			productReference = E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */;
@@ -310,7 +316,7 @@
 			);
 			mainGroup = E0E1D2862034A3350011E01A;
 			packageReferences = (
-				4C254EB5266BE88500CD7BB4 /* RemoteSwiftPackageReference */,
+				4C254EB5266BE88500CD7BB4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = E0E1D2902034A3350011E01A /* Products */;
 			projectDirPath = "";
@@ -343,7 +349,9 @@
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
+				4C209728266BFF3600C939C1 /* AppDetailHeaderViewController.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
+				4C209725266BFE9300C939C1 /* AppDetailHeaderView.swift in Sources */,
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
 				E0E1D358203ADC590011E01A /* NetworkManager.swift in Sources */,
 				E0E1D39C203AE6420011E01A /* ITunesSong.swift in Sources */,
@@ -542,7 +550,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4C254EB5266BE88500CD7BB4 /* RemoteSwiftPackageReference */ = {
+		4C254EB5266BE88500CD7BB4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -553,9 +561,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4C254EB6266BE88500CD7BB4 /* SwiftPackageProductDependency */ = {
+		4C254EB6266BE88500CD7BB4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4C254EB5266BE88500CD7BB4 /* RemoteSwiftPackageReference */;
+			package = 4C254EB5266BE88500CD7BB4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
