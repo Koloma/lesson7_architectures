@@ -10,6 +10,7 @@
 		4C209725266BFE9300C939C1 /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C209724266BFE9300C939C1 /* AppDetailHeaderView.swift */; };
 		4C209728266BFF3600C939C1 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C209727266BFF3600C939C1 /* AppDetailHeaderViewController.swift */; };
 		4C20972C266C037800C939C1 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20972B266C037800C939C1 /* SearchPresenter.swift */; };
+		4C209730266C0B0D00C939C1 /* SearchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20972F266C0B0D00C939C1 /* SearchModuleBuilder.swift */; };
 		4C254EB7266BE88500CD7BB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4C254EB6266BE88500CD7BB4 /* Alamofire */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2942034A3350011E01A /* SearchViewController.swift */; };
@@ -36,6 +37,7 @@
 		4C209724266BFE9300C939C1 /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
 		4C209727266BFF3600C939C1 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
 		4C20972B266C037800C939C1 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		4C20972F266C0B0D00C939C1 /* SearchModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModuleBuilder.swift; sourceTree = "<group>"; };
 		E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArchitecturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E1D2922034A3350011E01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0E1D2942034A3350011E01A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		4C209733266C0BC600C939C1 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				4C20972F266C0B0D00C939C1 /* SearchModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		E0E1D2862034A3350011E01A = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		E0E1D2A62034A36C0011E01A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4C209733266C0BC600C939C1 /* Builder */,
 				4C20972A266C034500C939C1 /* Presenter */,
 				F8A97B3622498F0C00FB2C0E /* View */,
 				F8114FBF22A3E5D500102830 /* Controller */,
@@ -355,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C209730266C0B0D00C939C1 /* SearchModuleBuilder.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
 				4C20972C266C037800C939C1 /* SearchPresenter.swift in Sources */,

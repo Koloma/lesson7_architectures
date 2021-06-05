@@ -11,14 +11,14 @@ import UIKit
 final class AppStartManager {
     
     var window: UIWindow?
-    let presenter = SearchPresenter()
+
     
     init(window: UIWindow?) {
         self.window = window
     }
     
     func start() {
-        let rootVC = SearchViewController(presenter: presenter)
+        let rootVC = SearchModuleBuilder.build()
         rootVC.navigationItem.title = "Search via iTunes"
         
         let navVC = self.configuredNavigationController
