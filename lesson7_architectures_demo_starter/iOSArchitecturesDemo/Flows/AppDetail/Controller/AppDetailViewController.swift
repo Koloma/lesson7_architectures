@@ -13,6 +13,7 @@ final class AppDetailViewController: UIViewController {
     let app: ITunesApp
     
     lazy var headerViewController = AppDetailHeaderViewController(app: self.app)
+    lazy var aboutViewController = AppDetailAboutViewController(app: self.app)
     
     init(app: ITunesApp) {
         self.app = app
@@ -32,6 +33,7 @@ final class AppDetailViewController: UIViewController {
             self.navigationController?.navigationBar.tintColor = UIColor.white;
             self.navigationItem.largeTitleDisplayMode = .never
             self.addHeaderViewController()
+            self.addAboutViewController()
             self.addDescriptionViewController()
         }
         
@@ -49,7 +51,7 @@ final class AppDetailViewController: UIViewController {
         }
         
         private func addDescriptionViewController() {
-            // TODO: ДЗ, сделать другие сабмодули
+
             let descriptionViewController = UIViewController()
             
             self.addChild(descriptionViewController)
@@ -63,5 +65,19 @@ final class AppDetailViewController: UIViewController {
                 descriptionViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
                 descriptionViewController.view.heightAnchor.constraint(equalToConstant: 250.0)])
         }
+    
+        private func addAboutViewController() {
+            self.addChild(self.aboutViewController)
+            self.view.addSubview(self.aboutViewController.view)
+            self.aboutViewController.didMove(toParent: self)
+            
+            self.aboutViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                self.aboutViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
+                self.aboutViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+                self.aboutViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+                ])
+        }
+    
     }
         

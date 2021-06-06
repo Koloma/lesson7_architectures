@@ -23,6 +23,10 @@ public struct ITunesApp: Codable {
     public let iconUrl: String?
     public let screenshotUrls: [String]
     
+    let releaseDate: String?
+    let releaseNotes: String?
+    let version: String?
+    
     // MARK: - Codable
     
     private enum CodingKeys: String, CodingKey {
@@ -36,6 +40,10 @@ public struct ITunesApp: Codable {
         case size = "fileSizeBytes"
         case iconUrl = "artworkUrl512"
         case screenshotUrls = "screenshotUrls"
+        
+        case releaseDate = "currentVersionReleaseDate"
+        case releaseNotes = "releaseNotes"
+        case version = "version"
     }
     
     public init(from decoder: Decoder) throws {
@@ -50,6 +58,10 @@ public struct ITunesApp: Codable {
         self.size = (try? container.decode(String.self, forKey: .size)) >>- { Bytes($0) }
         self.iconUrl = try? container.decode(String.self, forKey: .iconUrl)
         self.screenshotUrls = (try? container.decode([String].self, forKey: .screenshotUrls)) ?? []
+        
+        self.releaseDate = try container.decode(String.self, forKey: .releaseDate)
+        self.releaseNotes = try container.decode(String.self, forKey: .releaseNotes)
+        self.version = try container.decode(String.self, forKey: .version)
     }
     
     // MARK: - Init
@@ -63,7 +75,10 @@ public struct ITunesApp: Codable {
                   averageRatingForCurrentVersion: Float?,
                   size: Bytes?,
                   iconUrl: String?,
-                  screenshotUrls: [String]) {
+                  screenshotUrls: [String],
+                  releaseDate: String?,
+                  releaseNotes: String?,
+                  version: String?) {
         self.appName = appName
         self.appUrl = appUrl
         self.company = company
@@ -74,5 +89,8 @@ public struct ITunesApp: Codable {
         self.size = size
         self.iconUrl = iconUrl
         self.screenshotUrls = screenshotUrls
+        self.releaseDate = releaseDate
+        self.releaseNotes = releaseNotes
+        self.version = version
     }
 }

@@ -9,6 +9,18 @@
 import UIKit
 
 final class AppDetailHeaderView: UIView {
+ 
+    // MARK: - Init
+    
+    override init(frame: CGRect) {
+          super.init(frame: frame)
+          self.setupLayout()
+      }
+      
+      required init?(coder aDecoder: NSCoder) {
+          super.init(coder: aDecoder)
+          self.setupLayout()
+      }
     
     // MARK: - Subviews
     
@@ -54,15 +66,6 @@ final class AppDetailHeaderView: UIView {
         return label
     }()
 
-    override init(frame: CGRect) {
-          super.init(frame: frame)
-          self.setupLayout()
-      }
-      
-      required init?(coder aDecoder: NSCoder) {
-          super.init(coder: aDecoder)
-          self.setupLayout()
-      }
       
       // MARK: - UI
       
