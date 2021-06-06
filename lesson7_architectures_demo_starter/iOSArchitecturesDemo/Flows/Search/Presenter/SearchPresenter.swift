@@ -9,8 +9,9 @@
 import UIKit
 
 protocol SearchViewInput: class {
+    associatedtype SearchViewType
     
-    var searchResults: [ITunesApp] { get set }
+    var searchResults: [SearchViewType] { get set }
     
     func showError(error: Error)
     
@@ -22,10 +23,11 @@ protocol SearchViewInput: class {
 }
 
 protocol SearchViewOutput: class {
+    associatedtype SearchViewType
     
     func viewDidSearch(with query: String)
     
-    func viewDidSelectApp(_ app: ITunesApp)
+    func viewDidSelectApp(_ app: SearchViewType)
 }
 
 final class SearchPresenter {
