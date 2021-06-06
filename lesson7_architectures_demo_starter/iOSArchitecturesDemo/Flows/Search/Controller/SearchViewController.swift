@@ -12,9 +12,12 @@ final class SearchViewController: UIViewController {
     
     var emptyResultView = true
     
+    private let mediaType: ITunesSearchService.MediaType
     private let presenter: SearchViewOutput
-    init(presenter: SearchViewOutput) {
+    
+    init(presenter: SearchViewOutput, mediaType: ITunesSearchService.MediaType) {
         self.presenter = presenter
+        self.mediaType = mediaType
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,10 +40,6 @@ final class SearchViewController: UIViewController {
         }
     }
     
-    private struct Constants {
-        static let reuseIdentifier = "reuseId"
-    }
-    
     // MARK: - Lifecycle
     
     override func loadView() {
@@ -52,7 +51,7 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.searchView.searchBar.delegate = self
-        self.searchView.tableView.register(AppCell.self, forCellReuseIdentifier: Constants.reuseIdentifier)
+        self.searchView.tableView.register(AppCell.self, forCellReuseIdentifier: AppCell.reuseIdentifier)
         self.searchView.tableView.delegate = self
         self.searchView.tableView.dataSource = self
     }
@@ -71,7 +70,7 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
+        let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: AppCell.reuseIdentifier, for: indexPath)
         guard let cell = dequeuedCell as? AppCell else {
             return dequeuedCell
         }

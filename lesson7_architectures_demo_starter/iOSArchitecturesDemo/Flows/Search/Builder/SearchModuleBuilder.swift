@@ -8,12 +8,22 @@
 
 import UIKit
 
+
 final class SearchModuleBuilder {
     
-    static func build() -> (UIViewController & SearchViewInput) {
-        let presenter = SearchPresenter()
-        let viewController = SearchViewController(presenter: presenter)
-        presenter.viewInput = viewController
-        return viewController
+    static func build(mediaType: ITunesSearchService.MediaType) -> (UIViewController & SearchViewInput) {
+        switch mediaType {
+        case .apps:
+            let presenter = SearchPresenter()
+            let viewController = SearchViewController(presenter: presenter, mediaType: mediaType)
+            presenter.viewInput = viewController
+            return viewController
+        case .music:
+            let presenter = SearchPresenter()
+            let viewController = SearchViewController(presenter: presenter, mediaType: mediaType)
+            presenter.viewInput = viewController
+            return viewController
+        }
+
     }
 }

@@ -1,16 +1,15 @@
 //
-//  AppCell.swift
+//  SongCell.swift
 //  iOSArchitecturesDemo
 //
-//  Created by Evgeny Kireev on 01/03/2019.
-//  Copyright © 2019 ekireev. All rights reserved.
+//  Created by user197514 on 6/6/21.
+//  Copyright © 2021 ekireev. All rights reserved.
 //
 
 import UIKit
 
-final class AppCell: UITableViewCell {
-    
-    static let reuseIdentifier = String(describing: AppCell.self)
+final class SongCell: UITableViewCell {
+ 
     
     // MARK: - Subviews
     
