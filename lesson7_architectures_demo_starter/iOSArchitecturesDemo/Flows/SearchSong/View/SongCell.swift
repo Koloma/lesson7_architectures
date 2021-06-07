@@ -10,6 +10,7 @@ import UIKit
 
 final class SongCell: UITableViewCell {
  
+    static let reuseIdentifier = String(describing: SongCell.self)
     
     // MARK: - Subviews
     
@@ -51,7 +52,7 @@ final class SongCell: UITableViewCell {
     
     // MARK: - Methods
     
-    func configure(with cellModel: AppCellModel) {
+    func configure(with cellModel: SongCellModel) {
         self.titleLabel.text = cellModel.title
         self.subtitleLabel.text = cellModel.subtitle
         self.ratingLabel.text = cellModel.rating
