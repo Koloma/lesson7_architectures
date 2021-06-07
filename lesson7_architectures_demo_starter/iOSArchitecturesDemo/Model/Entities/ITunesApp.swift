@@ -59,9 +59,9 @@ public struct ITunesApp: Codable {
         self.iconUrl = try? container.decode(String.self, forKey: .iconUrl)
         self.screenshotUrls = (try? container.decode([String].self, forKey: .screenshotUrls)) ?? []
         
-        self.releaseDate = try container.decode(String.self, forKey: .releaseDate)
-        self.releaseNotes = try container.decode(String.self, forKey: .releaseNotes)
-        self.version = try container.decode(String.self, forKey: .version)
+        self.releaseDate = try? container.decode(String.self, forKey: .releaseDate)
+        self.releaseNotes = try? container.decode(String.self, forKey: .releaseNotes)
+        self.version = try? container.decode(String.self, forKey: .version)
     }
     
     // MARK: - Init

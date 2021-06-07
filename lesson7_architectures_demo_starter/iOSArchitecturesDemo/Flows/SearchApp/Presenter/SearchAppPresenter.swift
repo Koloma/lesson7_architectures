@@ -8,10 +8,9 @@
 
 import UIKit
 
-protocol SearchViewInput: class {
-    associatedtype SearchViewType
+protocol SearchAppViewInput: class {
     
-    var searchResults: [SearchViewType] { get set }
+    var searchResults: [ITunesApp] { get set }
     
     func showError(error: Error)
     
@@ -22,17 +21,16 @@ protocol SearchViewInput: class {
     func throbber(show: Bool)
 }
 
-protocol SearchViewOutput: class {
-    associatedtype SearchViewType
+protocol SearchAppViewOutput: class {
     
     func viewDidSearch(with query: String)
     
-    func viewDidSelectApp(_ app: SearchViewType)
+    func viewDidSelectApp(_ app: ITunesApp)
 }
 
-final class SearchPresenter {
+final class SearchAppPresenter {
     
-    weak var viewInput: (UIViewController & SearchViewInput)?
+    weak var viewInput: (UIViewController & SearchAppViewInput)?
     
     private let searchService = ITunesSearchService()
     
@@ -63,7 +61,7 @@ final class SearchPresenter {
 }
 
 // MARK: - SearchViewOutput
-extension SearchPresenter: SearchViewOutput {
+extension SearchAppPresenter: SearchAppViewOutput {
   
     func viewDidSearch(with query: String) {
         self.viewInput?.throbber(show: true)

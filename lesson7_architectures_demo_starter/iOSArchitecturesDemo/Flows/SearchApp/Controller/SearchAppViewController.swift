@@ -8,16 +8,14 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class SearchAppViewController: UIViewController {
     
     var emptyResultView = true
     
-    private let mediaType: ITunesSearchService.MediaType
-    private let presenter: SearchViewOutput
+    private let presenter: SearchAppViewOutput
     
-    init(presenter: SearchViewOutput, mediaType: ITunesSearchService.MediaType) {
+    init(presenter: SearchAppViewOutput) {
         self.presenter = presenter
-        self.mediaType = mediaType
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,8 +25,8 @@ final class SearchViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private var searchView: SearchView {
-        return self.view as! SearchView
+    private var searchView: SearchAppView {
+        return self.view as! SearchAppView
     }
     
     private let searchService = ITunesSearchService()
@@ -44,7 +42,7 @@ final class SearchViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        self.view = SearchView()
+        self.view = SearchAppView()
     }
 
     override func viewDidLoad() {
@@ -63,7 +61,7 @@ final class SearchViewController: UIViewController {
 }
 
 //MARK: - UITableViewDataSource
-extension SearchViewController: UITableViewDataSource {
+extension SearchAppViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults.count
@@ -82,7 +80,7 @@ extension SearchViewController: UITableViewDataSource {
 }
 
 //MARK: - UITableViewDelegate
-extension SearchViewController: UITableViewDelegate {
+extension SearchAppViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -92,7 +90,7 @@ extension SearchViewController: UITableViewDelegate {
 }
 
 //MARK: - UISearchBarDelegate
-extension SearchViewController: UISearchBarDelegate {
+extension SearchAppViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let query = searchBar.text else {
@@ -107,7 +105,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 // MARK: - extension
-extension SearchViewController: SearchViewInput {
+extension SearchAppViewController: SearchAppViewInput {
     
     func showError(error: Error) {
         let alert = UIAlertController(title: "Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
