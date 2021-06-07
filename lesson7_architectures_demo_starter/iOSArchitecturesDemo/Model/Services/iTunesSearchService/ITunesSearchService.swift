@@ -20,7 +20,7 @@ final class ITunesSearchService {
     private let baseUrl = "https://itunes.apple.com/search"
     private let defaultRegionCode = "RU"
     
-    private enum MediaType: String {
+    public enum MediaType: String {
         case apps = "software"
         case music = "music"
     }
@@ -39,6 +39,8 @@ final class ITunesSearchService {
         parameters[Parameter.mediaType] = MediaType.apps.rawValue
         
         let request = WebRequest(method: .get, url: baseUrl, parameters: parameters)
+        
+        print(request.description)
         
         networkManager.dataRequest(request) { [weak self] result in
             guard let self = self else {
@@ -80,8 +82,8 @@ final class ITunesSearchService {
                 .withValue { data in
                     do {
                         let result = try self.decoder.decode(ITunesSearchResult<ITunesSong>.self, from: data)
-                        let apps = result.results
-                        completion?(.success(apps))
+                        let songs = result.results
+                        completion?(.success(songs))
                     } catch {
                         print(error)
                         completion?(.failure(error))

@@ -10,6 +10,8 @@ import UIKit
 
 final class AppCell: UITableViewCell {
     
+    static let reuseIdentifier = String(describing: AppCell.self)
+    
     // MARK: - Subviews
     
     private(set) lazy var titleLabel: UILabel = {
