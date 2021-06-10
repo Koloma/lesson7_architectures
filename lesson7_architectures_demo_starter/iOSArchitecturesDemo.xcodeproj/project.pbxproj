@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C094C312672768800EE728E /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C094C302672768800EE728E /* StartMenuViewController.swift */; };
+		4C094C342672792D00EE728E /* StartMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C094C332672792D00EE728E /* StartMenuPresenter.swift */; };
+		4C094C3726727A2200EE728E /* StartMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C094C3626727A2200EE728E /* StartMenuInteractor.swift */; };
+		4C094C3A26727B1900EE728E /* StartMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C094C3926727B1900EE728E /* StartMenuRouter.swift */; };
+		4C094C3D26727BE400EE728E /* StartMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C094C3C26727BE400EE728E /* StartMenuFactory.swift */; };
 		4C209725266BFE9300C939C1 /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C209724266BFE9300C939C1 /* AppDetailHeaderView.swift */; };
 		4C209728266BFF3600C939C1 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C209727266BFF3600C939C1 /* AppDetailHeaderViewController.swift */; };
 		4C20972C266C037800C939C1 /* SearchAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20972B266C037800C939C1 /* SearchAppPresenter.swift */; };
@@ -44,6 +49,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C094C302672768800EE728E /* StartMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
+		4C094C332672792D00EE728E /* StartMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuPresenter.swift; sourceTree = "<group>"; };
+		4C094C3626727A2200EE728E /* StartMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuInteractor.swift; sourceTree = "<group>"; };
+		4C094C3926727B1900EE728E /* StartMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuRouter.swift; sourceTree = "<group>"; };
+		4C094C3C26727BE400EE728E /* StartMenuFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuFactory.swift; sourceTree = "<group>"; };
 		4C209724266BFE9300C939C1 /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
 		4C209727266BFF3600C939C1 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
 		4C20972B266C037800C939C1 /* SearchAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppPresenter.swift; sourceTree = "<group>"; };
@@ -93,6 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C094C2F2672764000EE728E /* StartMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4C094C302672768800EE728E /* StartMenuViewController.swift */,
+				4C094C332672792D00EE728E /* StartMenuPresenter.swift */,
+				4C094C3626727A2200EE728E /* StartMenuInteractor.swift */,
+				4C094C3926727B1900EE728E /* StartMenuRouter.swift */,
+				4C094C3C26727BE400EE728E /* StartMenuFactory.swift */,
+			);
+			path = StartMenu;
+			sourceTree = "<group>";
+		};
 		4C20972A266C034500C939C1 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +231,7 @@
 		E0E1D2A52034A3560011E01A /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				4C094C2F2672764000EE728E /* StartMenu */,
 				4CD7A562266EB6C9001A95BA /* SongDetail */,
 				4CD7A547266EABFF001A95BA /* SearchSong */,
 				E0E1D2A62034A36C0011E01A /* SearchApp */,
@@ -470,6 +493,7 @@
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
 				4C209728266BFF3600C939C1 /* AppDetailHeaderViewController.swift in Sources */,
+				4C094C3A26727B1900EE728E /* StartMenuRouter.swift in Sources */,
 				4CD7A560266EB528001A95BA /* SongCellMofel.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
 				4C209725266BFE9300C939C1 /* AppDetailHeaderView.swift in Sources */,
@@ -483,13 +507,17 @@
 				4CF955EE266CFB0400EDFC9F /* SongCell.swift in Sources */,
 				E0E1D39F203AE7400011E01A /* ImageDownloader.swift in Sources */,
 				F8114FBE22A3DBF400102830 /* SearchAppView.swift in Sources */,
+				4C094C342672792D00EE728E /* StartMenuPresenter.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
+				4C094C312672768800EE728E /* StartMenuViewController.swift in Sources */,
 				4CD7A54A266EAC5D001A95BA /* SearchSongModuleBuilder.swift in Sources */,
 				E0E1D384203AE3620011E01A /* AppStartManager.swift in Sources */,
 				4CD7A554266EB0DD001A95BA /* SearchSongPresenter.swift in Sources */,
+				4C094C3D26727BE400EE728E /* StartMenuFactory.swift in Sources */,
 				F8114FC122A3E5EE00102830 /* AppCellModel.swift in Sources */,
+				4C094C3726727A2200EE728E /* StartMenuInteractor.swift in Sources */,
 				4CD7A569266EB780001A95BA /* SongDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
