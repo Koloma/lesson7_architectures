@@ -48,6 +48,7 @@ final class SearchSongViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = "Song search"
         self.searchView.searchBar.delegate = self
         self.searchView.tableView.register(SongCell.self, forCellReuseIdentifier: SongCell.reuseIdentifier)
         self.searchView.tableView.delegate = self
