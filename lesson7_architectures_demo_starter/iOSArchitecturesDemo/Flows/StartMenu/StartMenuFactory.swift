@@ -10,7 +10,7 @@ import Foundation
 
 final class StartMenuFactory {
 
-    func createModule() -> StartMenuViewController {
+    static func createModule() -> StartMenuViewController {
         let controller = StartMenuViewController()
         let presenter = StartMenuPresenter()
         let interactror = StartMenuInteractor()
@@ -21,6 +21,7 @@ final class StartMenuFactory {
         presenter.interactor = interactror
         presenter.router = router
         interactror.presenter = presenter
+        router.viewController = controller
         
         return controller
     }

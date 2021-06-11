@@ -13,4 +13,12 @@ final class StartMenuPresenter {
     weak var viewController: StartMenuViewController?
     var interactor: StartMenuInteractor?
     var router: StartMenuRouter?
+    
+    public func goToAppSearchTap(){
+        router?.goToSearchApp()
+    }
+    
+    public func goToSongSearchTap(){
+        router?.goToSearchSong()
+    }
 }

@@ -49,7 +49,7 @@ final class SearchSongViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.searchView.searchBar.delegate = self
-        self.searchView.tableView.register(AppCell.self, forCellReuseIdentifier: AppCell.reuseIdentifier)
+        self.searchView.tableView.register(SongCell.self, forCellReuseIdentifier: SongCell.reuseIdentifier)
         self.searchView.tableView.delegate = self
         self.searchView.tableView.dataSource = self
     }

@@ -18,11 +18,18 @@ final class AppStartManager {
     }
     
     func start() {
-        let rootVC = SearchAppModuleBuilder.build()
-        rootVC.navigationItem.title = "Search via iTunes"
+        
+        let rootVC = StartMenuFactory.createModule()
+        rootVC.navigationItem.title = "Main Menu"
         
         let navVC = self.configuredNavigationController
         navVC.viewControllers = [rootVC]
+        
+//        let rootVC = SearchAppModuleBuilder.build()
+//        rootVC.navigationItem.title = "Search via iTunes"
+//
+//        let navVC = self.configuredNavigationController
+//        navVC.viewControllers = [rootVC]
         
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()

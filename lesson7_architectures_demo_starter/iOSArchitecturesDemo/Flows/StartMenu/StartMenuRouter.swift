@@ -12,7 +12,15 @@ final class StartMenuRouter {
     
     var viewController: UIViewController?
     
-    func goToAbout() {
-        viewController?.navigationController?.pushViewController(UIViewController(), animated: true)
+    
+    func goToSearchApp() {
+        let vc = SearchAppModuleBuilder.build()
+        viewController?.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func goToSearchSong() {
+        let vc = SearchSongModuleBuilder.build()
+        viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
